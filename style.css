@@ -14,14 +14,32 @@ html {
 	padding: 0;
 	}
 
+/*Setting the body to the right width. Won't shrink below approx 1000px*/
 body { 
-	min-width: 100%;
+	min-width: 62.5em;
 	font: 100% georgia, sans-serif;
 	line-height: 1.88889;
 	margin: auto; 
-	background-image: url(.images/winding-road-background.jpg);
+	color: white;
+}
+
+/*couldn't figure out the background blur without the extra divs. This div is only background image */
+.extra1 {
+	position: absolute;
+	top: 0px;
+	background-image: url(images/dark_road.jpg); /*http://ghostd7.deviantart.com/art/dark-road-169778469*/
+	background-color: 	#383838;
   background-repeat: no-repeat;
   background-attachment: fixed;
+	background-size: 100% 100%;
+	height: 125em;
+	width: 100%;
+	z-index: -1;
+  -webkit-filter: blur(7px);
+  -moz-filter: blur(7px);
+  -ms-filter: blur(7px);
+  -o-filter: blur(7px);
+  filter: blur(7px);
 }
 
 .page-wrapper {
@@ -32,108 +50,118 @@ p {
 	margin-top: 0; 
 	text-align: justify;
 	}
-
+/* TODO: adjust fonts and sizes and placement for headers*/
 h3 { 
 	font: italic normal 1.4em georgia, sans-serif;
 	letter-spacing: 1px; 
 	margin-bottom: 0; 
-	color: #7D775C;
+	color: #d9ff66;
 	}
 a:link { 
+	color: #ffea66;
 	}
 
 a:visited { 
+	color: #ffcc00;
 	}
+
+a:hover {
+	
+}
 
 abbr {
 	}
 
 
 /* specific divs */
+/*Allowing all content to be moved to the center*/
 .page-wrapper { 
 	position: relative;
 	}
 
+/*Only way I could find to target this part of the banner*/
 header[role=banner] {
 	width: 100%;
-	height: 130px;
-	padding: 10px;
+	height: 8.1em;
+	padding: .7em;
 }
 
+
+/*All IDs to set size and space for the elements. Mostly static, but flows as width shrinks down to approx 1000px*/
 #zen-summary {
 	width: 100%;
-	height: 70px;
+	height: 4.4em;
 	position: absolute;
-	top: 1750px;
+	top: 110em;
 }
 
 #zen-preamble {
 	width: 63%;
-	height: 300px;
+	height: 18.8em;
 	position: absolute;
-	left: 10px;
-	top: 200px;
+	left: .7em;
+	top: 12.5em;
 }
 
 #zen-explanation {
 	width: 63%;
-	height: 300px;
+	height: 18.8em;
 	position: absolute;
-	right: 10px;
-	top: 500px;
+	right: .7em;
+	top: 31.3em;
 }
 
 #zen-participation {
 	width: 48%;
-	height: 500px;
+	height: 31.3em;
 	position: absolute;
-	left: 10px;
-	top: 800px;
+	left: .7em;
+	top: 50em;
 }
 
 #zen-benefits {
 	width: 48%;
-	height: 400px;
+	height: 25em;
 	position: absolute;
-	left: 10px;
-	top: 1400px;
+	left: .7em;
+	top: 87.5em;
 }
 
 #zen-requirements {
 	width: 48%;
-	height: 1000px;
+	height: 62.5em;
 	position: absolute;
-	top: 800px;
-	right: 10px;
+	top: 50em;
+	right: .7em;
 }
 
 #design-selection {
 	width: 33%;
-	height: 300px;
+	height: 18.8em;
 	position: absolute;
-	top: 200px;
-	right: 10px;
+	top: 12.5em;
+	right: .7em;
 }
 
 #design-archives {
 	width: 33%;
-	height: 100px;
+	height: 6.25em;
 	position: absolute;
-	top: 1600px;
-	left: 10px;
+	top: 100em;
+	left: .7em;
 }
 
 #zen-resources {
 	width: 33%;
-	height: 300px;
+	height: 18.8em;
 	position: absolute;
-	left: 10px;
-	top: 500px;
+	left: .7em;
+	top: 31.3em;
 }
 
 footer {
 	width: 100%;
 	height: auto;
 	position: absolute;
-	top: 1850px;
+	top: 115.6em;
 }
