@@ -9,6 +9,9 @@
 
 
 /* basic elements */
+
+@import url("http://fonts.googleapis.com/css?family=Cinzel+Decorative:700");
+
 html {
 	margin: 0;
 	padding: 0;
@@ -136,26 +139,29 @@ header[role=banner] {
 }
 
 #design-selection {
+	background-image: url(images/steering-wheel-2.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100% 100%;
+	border-radius: 50%;
+}
+
+.design-selection {
+  font-family: "Cinzel Decorative", serif;
 	width: 33%;
 	height: 18.8em;
 	position: absolute;
 	top: 12.5em;
 	right: .7em;
 	text-align: center;
-}
+/*	
 
-.design-selection {
-	height: 20em;
-	width: 20em;
-	background-image: url(images/steering-wheel-2.jpg);
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: 60% 100%;
-	border-radius: 50%;
-	
+	*/
 }
 
 #design-archives {
+	margin: 3em;
+	padding: 3em;
 	width: 33%;
 	height: 6.25em;
 	position: absolute;
