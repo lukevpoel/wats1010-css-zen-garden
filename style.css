@@ -12,7 +12,7 @@
 
 @import url("https://fonts.googleapis.com/css?family=Lato:400,400italic,700");
 @import url("https://fonts.googleapis.com/css?family=Indie+Flower");
-/*@import url("https://fonts.googleapis.com/css?family=Covered+By+Your+Grace" );*/
+/*@import url("https://fonts.googleapis.com/css?family=Covered+By+Your+Grace" );possible font but like the others better*/
 @import url("http://fonts.googleapis.com/css?family=Cinzel+Decorative:700");
 
 html {
@@ -36,7 +36,7 @@ This image doesn't scroll well*/
 	position: absolute;
 	top: 0px;
 	background-image: url(images/dark_road.jpg); /*http://ghostd7.deviantart.com/art/dark-road-169778469*/
-	background-color: 	#383838;
+	background-color:	#383838;
   background-repeat: no-repeat;
   background-attachment: fixed;
 	background-size: 100% 100%;
@@ -198,9 +198,23 @@ ul {
 }
 
 footer {
+  text-align: justify;
+  min-width: 500px;
+	width: 80%;
 	font-family: "Cinzel Decorative", serif;
-	width: 100%;
 	height: auto;
 	position: absolute;
 	top: 115.6em;
+	padding-left: 10%;
+	padding-right: 10%;
+
+}
+
+footer:after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+}
+footer li {
+    display: inline-block;
 }
