@@ -42,7 +42,7 @@ But I couldn't find a better image for contrast.This image doesn't scroll well*/
 	background-size: 100% 100%;
 	height: 125em;
 	width: 100%;
-	z-index: -1;
+	z-index: -10;
   -webkit-filter: blur(3px);
   -moz-filter: blur(3px);
   -ms-filter: blur(3px);
@@ -50,22 +50,28 @@ But I couldn't find a better image for contrast.This image doesn't scroll well*/
   filter: blur(3px);
 }
 
+/*scrolling image for a dual layer feel. Again idk if I like it */
 #css-zen-garden:after {
 	content: "  ";
 	top: 0px;
 	position: absolute;
-	top: 0;
 	background-image: url(images/city-map-background.jpg); /*http://media.caranddriver.com/images/16q2/667719/2017-subaru-brz-photos-and-info-news-car-and-driver-photo-668549-s-450x274.jpg*/
-	background-color:	#383838;
+	background-color: #383838;
   background-repeat: no-repeat;
 	background-size: 100% 100%;
 	height: 125em;
 	width: 100%;
-	z-index: 0;
+	z-index: -9;
 	opacity: 0.3;
+	-webkit-filter: blur(2px);
+  -moz-filter: blur(2px);
+  -ms-filter: blur(2px);
+  -o-filter: blur(2px);
+  filter: blur(2px);
 }
 /*Allowing all content to be moved to the center*/
 .page-wrapper { 
+	z-index: 1;
 	position: relative;
 }
 
@@ -76,12 +82,16 @@ p {
 
 /* TODO: adjust fonts and sizes and placement for headers*/
 h1 {
+	margin: 0 0;
+	padding: 0 0;
 	color: #d9ff66;
 	font-family: 'Indie Flower';
 	font-size: 48px;
 } 
 
 h2 {
+	margin: 0 0;
+	padding: 0 0;
 	color: #d9ff66;
 	font-family: 'Indie Flower';
 	font-size: 40px;
@@ -93,6 +103,7 @@ h3 {
 	margin-bottom: 0; 
 	color: #d9ff66;
 	}
+
 a:link { 
 	color: #ffea66;
 	}
@@ -118,7 +129,6 @@ ul {
 
 
 #zen-intro {
-	z-index: 4;
 	width: 100%;
 	height: 13em;
 	text-align: center;
@@ -245,10 +255,10 @@ footer {
 }
 
 footer:after {
-    content: '';
-    display: inline-block;
-    width: 100%;
+  content: '';
+  display: inline-block;
+  width: 100%;
 }
 footer li {
-    display: inline-block;
+  display: inline-block;
 }
