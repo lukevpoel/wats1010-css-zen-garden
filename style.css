@@ -29,10 +29,10 @@ body {
 	font-family: lato, sans-serif;
 }
 
-/*couldn't figure out the background blur without the extra divs. This div is only background image 
-Not sure I like the non-scrolling background. Feels to static. But I couldn't find a better image for contrast
-This image doesn't scroll well*/
-.extra1 {
+/*Not sure I like the non-scrolling background. Feels too static. 
+But I couldn't find a better image for contrast.This image doesn't scroll well*/
+#css-zen-garden:before {
+	content: "  ";
 	position: absolute;
 	top: 0px;
 	background-image: url(images/dark_road.jpg); /*http://ghostd7.deviantart.com/art/dark-road-169778469*/
@@ -43,13 +43,27 @@ This image doesn't scroll well*/
 	height: 125em;
 	width: 100%;
 	z-index: -1;
-  -webkit-filter: blur(7px);
-  -moz-filter: blur(7px);
-  -ms-filter: blur(7px);
-  -o-filter: blur(7px);
-  filter: blur(7px);
+  -webkit-filter: blur(3px);
+  -moz-filter: blur(3px);
+  -ms-filter: blur(3px);
+  -o-filter: blur(3px);
+  filter: blur(3px);
 }
 
+#css-zen-garden:after {
+	content: "  ";
+	top: 0px;
+	position: absolute;
+	top: 0;
+	background-image: url(images/city-map-background.jpg); /*http://media.caranddriver.com/images/16q2/667719/2017-subaru-brz-photos-and-info-news-car-and-driver-photo-668549-s-450x274.jpg*/
+	background-color:	#383838;
+  background-repeat: no-repeat;
+	background-size: 100% 100%;
+	height: 125em;
+	width: 100%;
+	z-index: 0;
+	opacity: 0.3;
+}
 /*Allowing all content to be moved to the center*/
 .page-wrapper { 
 	position: relative;
@@ -101,13 +115,33 @@ ul {
 
 /* specific divs */
 /*ToDo design a nice banner*/
+
+
 #zen-intro {
+	z-index: 4;
 	width: 100%;
-	height: 7em;
+	height: 13em;
 	text-align: center;
+	position: relative;
 }
 
-
+/*#zen-intro:after {
+  content: ' ';
+  display: block;
+  position: absolute;
+  left: 0;
+	top: 0;
+  width: 100%;
+  height: 13em;
+  z-index: 0;
+  opacity: 0.3;
+  background-image: url(images/city-map-background.jpg);
+  -ms-background-size: cover;
+  -o-background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+	background-size: cover;
+}*/
 /*All IDs to set size and space for the elements. Mostly static, but flows as width shrinks down to approx 1000px*/
 #zen-summary {
 	width: 100%;
@@ -145,7 +179,7 @@ ul {
 	height: 25em;
 	position: absolute;
 	left: .7em;
-	top: 87.5em;
+	top: 92.5em;
 }
 
 #zen-requirements {
@@ -184,7 +218,7 @@ ul {
 	width: 33%;
 	height: 6.25em;
 	position: absolute;
-	top: 77em;
+	top: 82em;
 	left: .7em;
 }
 
