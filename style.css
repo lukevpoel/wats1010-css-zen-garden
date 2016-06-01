@@ -27,6 +27,7 @@ body {
 	margin: auto; 
 	color: white;
 	font-family: lato, sans-serif;
+	font-size: 120%;
 }
 
 /*Not sure I like the non-scrolling background. Feels too static. 
@@ -201,15 +202,15 @@ ul {
 }
 
 #design-selection {
-	background-image: url(images/steering-wheel-2.jpg);
-	/*this image is similar idea to what I was thinking, but looks tacky after editing and being displayed*/
+	background-image: url(images/lambo-background.jpg);
 	background-repeat: no-repeat;
-	background-position: center;
 	background-size: 100% 100%;
-	border-radius: 50%;
+	opacity: 0.8;
+	border-radius: 30%;
 }
 
 .design-selection {
+	font-size: 100%;
   font-family: "Cinzel Decorative", serif;
 	width: 33%;
 	height: 18.8em;
@@ -217,10 +218,8 @@ ul {
 	top: 12.5em;
 	right: .7em;
 	text-align: center;
-	list-style: none;
-/*	
-
-	*/
+	line-height: 1.4em;
+	/*this image is similar idea to what I was thinking, but looks tacky after editing and being displayed*/
 }
 
 #design-archives {
@@ -233,12 +232,21 @@ ul {
 }
 
 #zen-resources {
+	background-image: url(images/lambo-background.jpg);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	opacity: 0.8;
+	border-radius: 30%;
+}
+
+.zen-resources {
 	font-family: "Cinzel Decorative", serif;
 	width: 33%;
 	height: 18.8em;
 	position: absolute;
 	left: .7em;
 	top: 31.3em;
+	text-align: center;
 }
 
 footer {
