@@ -201,15 +201,24 @@ ul {
 	right: .7em;
 }
 
-#design-selection {
-	background-image: url(images/lambo-background.jpg);
-	background-repeat: no-repeat;
-	background-size: 100% 100%;
-	opacity: 0.8;
+.design-selection {
+	transition: background 1s ease;
+	-webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+	-ms-transition: all 1s ease;
+  -o-transition: all 1s ease;
 	border-radius: 30%;
+	background-size: 100% 100%;
+	opacity: .5;
 }
 
-.design-selection {
+.design-selection:hover {
+	background-image: url(images/lambo-background.jpg); //http://www.1001freedownloads.com/wallpaper/dark-cars-black-lamborghini-aventador-limited-edition-sports-car;
+	background-repeat: no-repeat;
+	opacity: 1;
+}
+
+#design-selection {
 	font-size: 100%;
   font-family: "Cinzel Decorative", serif;
 	width: 33%;
@@ -231,8 +240,8 @@ ul {
 	left: .7em;
 }
 
-#zen-resources {
-	background-image: url(images/lambo-background.jpg);
+#zen-resources:hover {
+	background-image: url(images/merc-background.png); //http://img10.deviantart.net/e1f3/i/2013/218/e/c/dark_car_by_vacantia-d6gzttj.png;
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 	opacity: 0.8;
