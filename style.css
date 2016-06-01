@@ -12,7 +12,7 @@
 
 @import url("https://fonts.googleapis.com/css?family=Lato:400,400italic,700");
 @import url("https://fonts.googleapis.com/css?family=Indie+Flower");
-@import url("https://fonts.googleapis.com/css?family=Covered+By+Your+Grace" );
+/*@import url("https://fonts.googleapis.com/css?family=Covered+By+Your+Grace" );*/
 @import url("http://fonts.googleapis.com/css?family=Cinzel+Decorative:700");
 
 html {
@@ -23,14 +23,15 @@ html {
 /*Setting the body to the right width. Won't shrink below approx 1000px*/
 body { 
 	min-width: 62.5em;
-	font: 100% georgia, sans-serif;
 	line-height: 1.88889;
 	margin: auto; 
 	color: white;
 	font-family: lato, sans-serif;
 }
 
-/*couldn't figure out the background blur without the extra divs. This div is only background image */
+/*couldn't figure out the background blur without the extra divs. This div is only background image 
+Not sure I like the non-scrolling background. Feels to static. But I couldn't find a better image for contrast
+This image doesn't scroll well*/
 .extra1 {
 	position: absolute;
 	top: 0px;
@@ -49,14 +50,16 @@ body {
   filter: blur(7px);
 }
 
-.page-wrapper {
-	
+/*Allowing all content to be moved to the center*/
+.page-wrapper { 
+	position: relative;
 }
 
 p { 
 	margin-top: 0; 
-	text-align: justify;
+	text-align: auto;
 	}
+
 /* TODO: adjust fonts and sizes and placement for headers*/
 h1 {
 	color: #d9ff66;
@@ -91,14 +94,13 @@ a:hover {
 abbr {
 	}
 
+ul {
+	list-style-type: none;
+}
+
 
 /* specific divs */
-/*Allowing all content to be moved to the center*/
-.page-wrapper { 
-	position: relative;
-	}
-
-/*Only way I could find to target this part of the banner*/
+/*ToDo design a nice banner*/
 #zen-intro {
 	width: 100%;
 	height: 7em;
@@ -107,8 +109,6 @@ abbr {
 
 
 /*All IDs to set size and space for the elements. Mostly static, but flows as width shrinks down to approx 1000px*/
-
-
 #zen-summary {
 	width: 100%;
 	height: 4.4em;
@@ -158,6 +158,7 @@ abbr {
 
 #design-selection {
 	background-image: url(images/steering-wheel-2.jpg);
+	/*this image is similar idea to what I was thinking, but looks tacky after editing and being displayed*/
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 100% 100%;
@@ -172,6 +173,7 @@ abbr {
 	top: 12.5em;
 	right: .7em;
 	text-align: center;
+	list-style: none;
 /*	
 
 	*/
@@ -182,7 +184,7 @@ abbr {
 	width: 33%;
 	height: 6.25em;
 	position: absolute;
-	top: 90em;
+	top: 77em;
 	left: .7em;
 }
 
@@ -196,6 +198,7 @@ abbr {
 }
 
 footer {
+	font-family: "Cinzel Decorative", serif;
 	width: 100%;
 	height: auto;
 	position: absolute;
