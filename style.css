@@ -295,14 +295,15 @@ footer {
 
 }
 
-footer:nth-child(1n) {
-	
+footer a:nth-child(1n) {
+	//background-color:yellow;
+	background-image: (images/audi-button-background.jpg);
 }
 
-footer:nth-child(1n):hover {
+/*footer a:nth-child(1n):hover {
 	background-image: (images/audi-button-background.jpg);
 	background-repeat: no-repeat;
-}
+}*/
 
 footer:after {
   content: '';
