@@ -6,7 +6,7 @@
 /* Not all elements are defined in this file, so you'll most likely want to refer to the xhtml as well. */
 
 /* Your images should be linked as if the CSS file sits in the same folder as the images. ie. no paths. */
-
+/*Not sure I like the current number of images. May make the page load too slow.*/
 
 /* basic elements */
 
@@ -53,7 +53,7 @@ But I couldn't find a better image for contrast.This image doesn't scroll well*/
 
 /*scrolling image for a dual layer feel. Again idk if I like it */
 #css-zen-garden:after {
-	content: "  ";
+	content: " "; /*http://media.caranddriver.com/images/16q2/667719/2017-subaru-brz-photos-and-info-news-car-and-driver-photo-668549-s-450x274.jpg*/
 	top: 0px;
 	position: absolute;
 	background-image: url(images/city-map-background.jpg); /*http://media.caranddriver.com/images/16q2/667719/2017-subaru-brz-photos-and-info-news-car-and-driver-photo-668549-s-450x274.jpg*/
@@ -78,26 +78,9 @@ But I couldn't find a better image for contrast.This image doesn't scroll well*/
 
 p { 
 	margin-top: 0; 
-	text-align: auto;
 	}
 
-/* TODO: adjust fonts and sizes and placement for headers*/
-h1 {
-	margin: 0 0;
-	padding: 0 0;
-	color: #d9ff66;
-	font-family: 'Indie Flower';
-	font-size: 48px;
-} 
-
-h2 {
-	margin: 0 0;
-	padding: 0 0;
-	color: #d9ff66;
-	font-family: 'Indie Flower';
-	font-size: 40px;
-}
-
+/* Fonts and all are approximately what I want*/
 h3 { 
 	font: italic normal 1.4em;
 	letter-spacing: 1px; 
@@ -126,14 +109,20 @@ ul {
 
 
 /* specific divs */
-/*ToDo design a nice banner*/
-
-
-#zen-intro {
+/*Just a simple banner*/
+#zen-intro { 
 	width: 100%;
 	height: 13em;
 	text-align: center;
 	position: relative;
+}
+
+/*for some reason the using the id or class applies these styles to the rest of the page. Easier to target just the banner.*/
+header[role=banner] { 
+	line-height: .7;
+	color: #d9ff66;
+	font-family: 'Indie Flower';
+	font-size: 40px;
 }
 
 /*#zen-intro:after {
@@ -201,7 +190,8 @@ ul {
 	right: .7em;
 }
 
-.design-selection {
+/*setting background image up for transition*/
+.design-selection { 
 	transition: background 1s ease;
 	-webkit-transition: all 1s ease;
   -moz-transition: all 1s ease;
@@ -210,9 +200,11 @@ ul {
 	border-radius: 30%;
 	background-size: 100% 100%;
 	opacity: .5;
+	background-image: none;
 }
 
-.design-selection:hover {
+/*image and text fade to be fully visible*/
+.design-selection:hover { 
 	background-image: url(images/lambo-background.jpg); //http://www.1001freedownloads.com/wallpaper/dark-cars-black-lamborghini-aventador-limited-edition-sports-car;
 	background-repeat: no-repeat;
 	opacity: 1;
@@ -228,27 +220,59 @@ ul {
 	right: .7em;
 	text-align: center;
 	line-height: 1.4em;
-	/*this image is similar idea to what I was thinking, but looks tacky after editing and being displayed*/
+}
+
+/*setting background image up for transition*/
+.design-archives { 
+	transition: background 1s ease;
+	-webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+	-ms-transition: all 1s ease;
+  -o-transition: all 1s ease;
+	border-radius: 30%;
+	background-size: 100% 100%;
+	opacity: .5;
+	background-image: none;
+}
+
+/*image and text fade to be fully visible*/
+.design-archives:hover { 
+	background-image: url(images/audi-background.jpg); //http://img10.deviantart.net/e1f3/i/2013/218/e/c/dark_car_by_vacantia-d6gzttj.png;
+	background-repeat: no-repeat;
+	opacity: 1;
 }
 
 #design-archives {
+	text-align: center;
 	font-family: "Cinzel Decorative", serif;
 	width: 33%;
-	height: 6.25em;
+	height: 12em;
 	position: absolute;
 	top: 82em;
 	left: .7em;
 }
 
-#zen-resources:hover {
-	background-image: url(images/merc-background.png); //http://img10.deviantart.net/e1f3/i/2013/218/e/c/dark_car_by_vacantia-d6gzttj.png;
-	background-repeat: no-repeat;
-	background-size: 100% 100%;
-	opacity: 0.8;
+/*setting background image up for transition*/
+.zen-resources {
+	transition: background 1s ease;
+	-webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+	-ms-transition: all 1s ease;
+  -o-transition: all 1s ease;
 	border-radius: 30%;
+	background-size: 100% 100%;
+	opacity: .5;
+	background-image: none;
 }
 
-.zen-resources {
+/*image and text fade to be fully visible*/
+.zen-resources:hover { 
+	background-image: url(images/merc-background.png); //http://img10.deviantart.net/e1f3/i/2013/218/e/c/dark_car_by_vacantia-d6gzttj.png;
+	background-repeat: no-repeat;
+	opacity: 1;
+}
+
+#zen-resources {
 	font-family: "Cinzel Decorative", serif;
 	width: 33%;
 	height: 18.8em;
@@ -269,6 +293,15 @@ footer {
 	padding-left: 10%;
 	padding-right: 10%;
 
+}
+
+footer:nth-child(1n) {
+	
+}
+
+footer:nth-child(1n):hover {
+	background-image: (images/audi-button-background.jpg);
+	background-repeat: no-repeat;
 }
 
 footer:after {
