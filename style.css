@@ -10,6 +10,7 @@
 
 /* basic elements */
 
+/*future should combine all font imports so that they load faster*/
 @import url("https://fonts.googleapis.com/css?family=Lato:400,400italic,700");
 @import url("https://fonts.googleapis.com/css?family=Indie+Flower");
 /*@import url("https://fonts.googleapis.com/css?family=Covered+By+Your+Grace" );possible font but like the others better*/
@@ -108,12 +109,9 @@ a:visited {
 	}
 
 a:hover {
-	text-decoration-line: underline;
+	text-decoration-line: underline; 
 	color: #d9ff66;
 }
-
-abbr {
-	}
 
 ul {
 	list-style-type: none;
@@ -220,7 +218,7 @@ All selection elements are set to fade in and out the background*/
 /*image and text fade to be fully visible*/
 .design-selection:hover { 
 	background-color: black;
-	background-image: url(images/lambo-background.jpg); //http://www.1001freedownloads.com/wallpaper/dark-cars-black-lamborghini-aventador-limited-edition-sports-car;
+	background-image: url(images/lambo-background.jpg); /*http://www.1001freedownloads.com/wallpaper/dark-cars-black-lamborghini-aventador-limited-edition-sports-car;*/
 	background-repeat: no-repeat;
 	opacity: 1;
 }
@@ -253,7 +251,7 @@ All selection elements are set to fade in and out the background*/
 /*image and text fade to be fully visible*/
 .design-archives:hover { 
 	background-color: black;
-	background-image: url(images/audi-background.jpg); //http://img10.deviantart.net/e1f3/i/2013/218/e/c/dark_car_by_vacantia-d6gzttj.png;
+	background-image: url(images/audi-background.jpg); /*http://img10.deviantart.net/e1f3/i/2013/218/e/c/dark_car_by_vacantia-d6gzttj.png;*/
 	background-repeat: no-repeat;
 	opacity: 1;
 }
@@ -284,7 +282,7 @@ All selection elements are set to fade in and out the background*/
 /*image and text fade to be fully visible*/
 .zen-resources:hover { 
 	background-color: black;
-	background-image: url(images/merc-background.png); //http://img10.deviantart.net/e1f3/i/2013/218/e/c/dark_car_by_vacantia-d6gzttj.png;
+	background-image: url(images/merc-background.png); /*http://img10.deviantart.net/e1f3/i/2013/218/e/c/dark_car_by_vacantia-d6gzttj.png*/
 	background-repeat: no-repeat;
 	opacity: 1;
 }
@@ -312,24 +310,27 @@ footer {
 
 }
 
+/*prepping footer for hover selector*/
 footer a:nth-child(1n) {
 	padding: 20px;
 	transition: all 1s ease;
 	-webkit-transition: all 1s ease;
-  -moz-transition: all 1s ease;
+	-moz-transition: all 1s ease;
 	-ms-transition: all 1s ease;
-  -o-transition: all 1s ease;
+  	-o-transition: all 1s ease;
 	border-radius: 30%;
 	background-size: 100% 100%;
 	opacity: 1;
 }
 
+/*show a background when any footer link is hovered*/
 footer a:nth-child(1n):hover {
 	background-color: black;
-	background-image: url(images/audi-button-background.jpg);
+	background-image: url(images/audi-button-background.jpg); /*http://images.caricos.com/a/audi/2013_audi_r8/images/1920x1080/2013_audi_r8_33_1920x1080.jpg*/
 	background-repeat: no-repeat;
 }
 
+/*center footer and allow proper spacing*/
 footer:after {
   content: '';
   display: inline-block;
