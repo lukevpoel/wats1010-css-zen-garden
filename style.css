@@ -23,6 +23,7 @@ html {
 /*Setting the body to the right width. Won't shrink below approx 1000px*/
 body { 
 	min-width: 62.5em;
+	max-width: 1920px;
 	line-height: 1.88889;
 	margin: auto; 
 	color: white;
@@ -88,15 +89,26 @@ h3 {
 	color: #d9ff66;
 	}
 
+/*links fade color when hovering*/
 a:link { 
 	color: #ffea66;
-	}
+	text-decoration-line: none; /*why isn't this working?*/
+	transition: all 1s ease;
+	-webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+	-ms-transition: all 1s ease;
+  -o-transition: all 1s ease;
+	border-radius: 30%;
+	background-size: 100% 100%;
+	opacity: 1;
+}
 
 a:visited { 
 	color: #ffcc00;
 	}
 
 a:hover {
+	text-decoration-line: underline;
 	color: #d9ff66;
 }
 
@@ -125,7 +137,8 @@ header[role=banner] {
 	font-size: 40px;
 }
 
-/*#zen-intro:after {
+/*possible use later
+#zen-intro:after {
   content: ' ';
   display: block;
   position: absolute;
@@ -142,7 +155,8 @@ header[role=banner] {
   -webkit-background-size: cover;
 	background-size: cover;
 }*/
-/*All IDs to set size and space for the elements. Mostly static, but flows as width shrinks down to approx 1000px*/
+/*All IDs to set size and space for the elements. Mostly static, but flows as width shrinks down to approx 1000px
+All selection elements are set to fade in and out the background*/
 #zen-summary {
 	width: 100%;
 	height: 4.4em;
@@ -199,12 +213,13 @@ header[role=banner] {
   -o-transition: all 1s ease;
 	border-radius: 30%;
 	background-size: 100% 100%;
-	opacity: .5;
+	opacity: 1;
 	background-image: none;
 }
 
 /*image and text fade to be fully visible*/
 .design-selection:hover { 
+	background-color: black;
 	background-image: url(images/lambo-background.jpg); //http://www.1001freedownloads.com/wallpaper/dark-cars-black-lamborghini-aventador-limited-edition-sports-car;
 	background-repeat: no-repeat;
 	opacity: 1;
@@ -231,12 +246,13 @@ header[role=banner] {
   -o-transition: all 1s ease;
 	border-radius: 30%;
 	background-size: 100% 100%;
-	opacity: .5;
+	opacity: 1; /*keeping opacity control in case I want to change it later;*/
 	background-image: none;
 }
 
 /*image and text fade to be fully visible*/
 .design-archives:hover { 
+	background-color: black;
 	background-image: url(images/audi-background.jpg); //http://img10.deviantart.net/e1f3/i/2013/218/e/c/dark_car_by_vacantia-d6gzttj.png;
 	background-repeat: no-repeat;
 	opacity: 1;
@@ -254,19 +270,20 @@ header[role=banner] {
 
 /*setting background image up for transition*/
 .zen-resources {
-	transition: background 1s ease;
+	transition: all 1s ease;
 	-webkit-transition: all 1s ease;
   -moz-transition: all 1s ease;
 	-ms-transition: all 1s ease;
   -o-transition: all 1s ease;
 	border-radius: 30%;
 	background-size: 100% 100%;
-	opacity: .5;
+	opacity: 1;
 	background-image: none;
 }
 
 /*image and text fade to be fully visible*/
 .zen-resources:hover { 
+	background-color: black;
 	background-image: url(images/merc-background.png); //http://img10.deviantart.net/e1f3/i/2013/218/e/c/dark_car_by_vacantia-d6gzttj.png;
 	background-repeat: no-repeat;
 	opacity: 1;
@@ -296,20 +313,25 @@ footer {
 }
 
 footer a:nth-child(1n) {
-	//background-color:yellow;
-	background-image: (images/audi-button-background.jpg);
+	padding: 20px;
+	transition: all 1s ease;
+	-webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+	-ms-transition: all 1s ease;
+  -o-transition: all 1s ease;
+	border-radius: 30%;
+	background-size: 100% 100%;
+	opacity: 1;
 }
 
-/*footer a:nth-child(1n):hover {
-	background-image: (images/audi-button-background.jpg);
+footer a:nth-child(1n):hover {
+	background-color: black;
+	background-image: url(images/audi-button-background.jpg);
 	background-repeat: no-repeat;
-}*/
+}
 
 footer:after {
   content: '';
   display: inline-block;
   width: 100%;
-}
-footer li {
-  display: inline-block;
 }
